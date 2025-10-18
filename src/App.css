@@ -8,6 +8,24 @@ body {
   font-family: 'Courier New', monospace;
   background: #f0f0f0;
   -webkit-font-smoothing: antialiased;
+}
+
+nav {
+  background-color: #333;
+  padding: 1rem;
+  margin-bottom: 2rem;
+}
+
+nav a {
+  color: white;
+  text-decoration: none;
+  padding: 0.5rem 1rem;
+  margin: 0 0.5rem;
+}
+
+nav a:hover {
+  background-color: #555;
+  border-radius: 4px;
   -moz-osx-font-smoothing: grayscale;
 }
 
