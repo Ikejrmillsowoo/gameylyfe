@@ -1,5 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import './MedicationsWeb.css';
+import { Link } from 'react-router-dom';
+import Navigator from './Navigator';
 
 const MedicationsWeb = () => {
   const [medications, setMedications] = useState([
@@ -151,12 +153,7 @@ const MedicationsWeb = () => {
             <span className="logo-icon">🎮</span>
             <h1>Gaming Life</h1>
           </div>
-          <nav className="nav-menu">
-            <button className="nav-item active">Medications</button>
-            <button className="nav-item">Mood Check</button>
-            <button className="nav-item">Resources</button>
-            <button className="nav-item">Achievements</button>
-          </nav>
+          <Navigator />
           <div className="user-menu">
             <span className="points-badge">🏆 {points} pts</span>
             <button className="profile-btn">👤</button>

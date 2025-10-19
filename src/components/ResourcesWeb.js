@@ -1,5 +1,6 @@
 import React, { useState } from 'react';
 import './ResourcesWeb.css';
+import Navigator from './Navigator';
 
 const ResourcesWeb = () => {
   const [selectedCategory, setSelectedCategory] = useState('all');
@@ -185,12 +186,7 @@ const ResourcesWeb = () => {
             <span className="logo-icon">🎮</span>
             <h1>Gaming Life</h1>
           </div>
-          <nav className="nav-menu">
-            <button className="nav-item">Medications</button>
-            <button className="nav-item">Mood Check</button>
-            <button className="nav-item active">Resources</button>
-            <button className="nav-item">Achievements</button>
-          </nav>
+          <Navigator />
           <div className="user-menu">
             <span className="points-badge">🏆 250 pts</span>
             <button className="profile-btn">👤</button>
