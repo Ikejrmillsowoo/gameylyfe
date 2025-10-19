@@ -8,10 +8,10 @@ function App() {
   return (
     <Router>
       <div className="App">
-        <nav>
+        {/* <nav>
           <Link to="/">Medications</Link>
           <Link to="/resources">Resources</Link>
-        </nav>
+        </nav> */}
         
         <Routes>
           <Route path="/" element={<MedicationsWeb />} />
