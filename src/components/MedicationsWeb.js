@@ -44,6 +44,7 @@ const MedicationsWeb = () => {
   const [streak, setStreak] = useState(7);
   const [selectedMed, setSelectedMed] = useState(null);
   const [searchTerm, setSearchTerm] = useState('');
+  const [darkMode, setDarkMode] = useState(false);
 
   // Pet states
   const [petMood, setPetMood] = useState('happy');
@@ -143,7 +144,7 @@ const MedicationsWeb = () => {
   };
 
   return (
-    <div className="medications-web-container">
+    <div className={`medications-web-container ${darkMode ? 'dark-mode' : ''}`}>
       {/* Header */}
       <header className="web-header">
         <div className="header-content">
@@ -159,6 +160,13 @@ const MedicationsWeb = () => {
           </nav>
           <div className="user-menu">
             <span className="points-badge">🏆 {points} pts</span>
+            <button 
+              className="dark-mode-toggle"
+              onClick={() => setDarkMode(!darkMode)}
+              title={darkMode ? "Light Mode" : "Dark Mode"}
+            >
+              {darkMode ? '☀️' : '🌙'}
+            </button>
             <button className="profile-btn">👤</button>
           </div>
         </div>
