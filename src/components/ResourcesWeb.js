@@ -11,41 +11,63 @@ const ResourcesWeb = () => {
   const resources = [
     {
       id: 1,
-      title: 'Crisis Text Line',
-      category: 'crisis',
-      type: 'hotline',
-      description: 'Free 24/7 support for those in crisis. Text HOME to 741741',
+      title: '211.org',
+      category: 'health',
+      type: 'Webpage',
+      description: 'free health clinics, community health centers, and screening programs',
       contact: 'Text: 741741',
-      website: 'https://www.crisistextline.org',
-      icon: '🆘',
+      website: 'https://211.org',
+      icon: '🏥',
       availability: '24/7'
     },
     {
       id: 2,
-      title: 'National Suicide Prevention Lifeline',
-      category: 'crisis',
-      type: 'hotline',
-      description: 'Free and confidential support for people in distress',
-      contact: 'Call: 988',
-      website: 'https://988lifeline.org',
-      icon: '📞',
+      title: 'Free Clinics Directory',
+      category: 'health',
+      type: 'Webpage',
+      description: 'database of free and charitable clinics across the US',
+      contact: 'Call: 888',
+      website: 'https://freeclinics.com)',
+      icon: '🏥',
       availability: '24/7'
     },
     {
       id: 3,
-      title: 'NAMI (National Alliance on Mental Illness)',
-      category: 'support',
-      type: 'organization',
-      description: 'Mental health support groups and educational resources',
-      contact: 'Helpline: 1-800-950-NAMI',
-      website: 'https://www.nami.org',
-      icon: '🤝',
+      title: 'HRSA Health Center Locator',
+      category: 'health',
+      type: 'Webpage',
+      description: 'Free or low-cost care based on income',
+      contact: 'Helpline: 1-800-950-HRSA',
+      website: 'findahealthcenter.hrsa.gov',
+      icon: '🏥',
       availability: 'Mon-Fri 10am-10pm ET'
     },
     {
       id: 4,
+      title: 'Feeding America Food Bank Locator',
+      category: 'food',
+      type: 'Link',
+      description: 'The nation\'s largest hunger-relief organization',
+      contact: 'Mobile App',
+      website: 'feedingamerica.org/find-your-local-foodbank',
+      icon: '🍉',
+      availability: 'On-demand'
+    },
+    {
+      id: 5,
+      title: 'USDA SNAP Retailer Locator',
+      category: 'food',
+      type: 'Link',
+      description: 'Helps people find stores that accept SNAP/EBT benefits',
+      contact: 'Mobile App',
+      website: 'fns.usda.gov/snap/retailer-locator',
+      icon: '🍉',
+      availability: 'On-demand'
+    },
+    {
+      id: 6,
       title: 'Headspace',
-      category: 'apps',
+      category: 'therapy',
       type: 'meditation',
       description: 'Guided meditation and mindfulness app',
       contact: 'Mobile App',
@@ -54,7 +76,7 @@ const ResourcesWeb = () => {
       availability: 'On-demand'
     },
     {
-      id: 5,
+      id: 7,
       title: 'BetterHelp',
       category: 'therapy',
       type: 'online',
@@ -65,9 +87,9 @@ const ResourcesWeb = () => {
       availability: 'Flexible scheduling'
     },
     {
-      id: 6,
+      id: 8,
       title: 'Calm',
-      category: 'apps',
+      category: 'therapy',
       type: 'meditation',
       description: 'Sleep stories, meditation, and relaxation techniques',
       contact: 'Mobile App',
@@ -76,7 +98,7 @@ const ResourcesWeb = () => {
       availability: 'On-demand'
     },
     {
-      id: 7,
+      id: 9,
       title: 'Psychology Today Therapist Finder',
       category: 'therapy',
       type: 'directory',
@@ -87,9 +109,9 @@ const ResourcesWeb = () => {
       availability: 'Browse anytime'
     },
     {
-      id: 8,
+      id: 10,
       title: 'Mental Health America Screening',
-      category: 'screening',
+      category: 'health',
       type: 'assessment',
       description: 'Free, anonymous mental health screenings',
       contact: 'Online Tool',
@@ -98,7 +120,7 @@ const ResourcesWeb = () => {
       availability: 'Available anytime'
     },
     {
-      id: 9,
+      id: 11,
       title: 'Substance Abuse and Mental Health Services',
       category: 'support',
       type: 'government',
@@ -109,7 +131,7 @@ const ResourcesWeb = () => {
       availability: '24/7'
     },
     {
-      id: 10,
+      id: 12,
       title: 'Talkspace',
       category: 'therapy',
       type: 'online',
@@ -120,37 +142,27 @@ const ResourcesWeb = () => {
       availability: 'Message anytime'
     },
     {
-      id: 11,
+      id: 13,
       title: 'Youper',
-      category: 'apps',
+      category: 'support',
       type: 'ai-therapy',
       description: 'AI-powered emotional health assistant',
       contact: 'Mobile App',
       website: 'https://www.youper.ai',
       icon: '🤖',
       availability: 'On-demand'
-    },
-    {
-      id: 12,
-      title: 'The Trevor Project',
-      category: 'crisis',
-      type: 'lgbtq',
-      description: 'Crisis support for LGBTQ+ youth',
-      contact: 'Call: 1-866-488-7386',
-      website: 'https://www.thetrevorproject.org',
-      icon: '🏳️‍🌈',
-      availability: '24/7'
     }
   ];
 
   const categories = [
     { id: 'all', label: 'All Resources', icon: '📚' },
-    { id: 'crisis', label: 'Crisis Support', icon: '🆘' },
+    { id: 'health', label: 'Health Screening', icon: '🏥' },
+    { id: 'food', label: 'Food Support', icon: '🍗' },
     { id: 'therapy', label: 'Therapy', icon: '💬' },
-    { id: 'apps', label: 'Apps & Tools', icon: '📱' },
-    { id: 'support', label: 'Support Groups', icon: '🤝' },
-    { id: 'screening', label: 'Screening', icon: '📋' }
+    { id: 'support', label: 'Support Groups', icon: '🤝' }
   ];
+
+  const [darkMode, setDarkMode] = useState(false);
 
   const handleBookmark = (resourceId) => {
     setBookmarkedResources(prev => {
@@ -189,6 +201,13 @@ const ResourcesWeb = () => {
           <Navigator />
           <div className="user-menu">
             <span className="points-badge">🏆 250 pts</span>
+            <button 
+              className="dark-mode-toggle"
+              onClick={() => setDarkMode(!darkMode)}
+              title={darkMode ? "Light Mode" : "Dark Mode"}
+            >
+              {darkMode ? '☀️' : '🌙'}
+            </button>
             <button className="profile-btn">👤</button>
           </div>
         </div>
@@ -246,7 +265,7 @@ const ResourcesWeb = () => {
         <main className="main-content">
           <div className="content-header">
             <div>
-              <h2>Mental Health Resources</h2>
+              <h2>Resources</h2>
               <p className="date-display">{getCurrentDate()}</p>
             </div>
             <div className="header-actions">
