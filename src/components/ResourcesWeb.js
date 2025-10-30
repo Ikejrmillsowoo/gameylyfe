@@ -221,7 +221,7 @@ const ResourcesWeb = () => {
   };
 
   return (
-    <div className="resources-web-container">
+    <div className={`resources-web-container ${darkMode ? 'dark-mode' : ''}`}>
       {/* Header */}
       <header className="web-header">
         <div className="header-content">

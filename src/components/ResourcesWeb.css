@@ -110,6 +110,29 @@
   color: white;
 }
 
+.dark-mode-toggle {
+  width: 45px;
+  height: 45px;
+  border: 2px solid var(--border-color);
+  border-radius: 50%;
+  font-size: 1.3em;
+  cursor: pointer;
+  background: white;
+  transition: all 0.5s ease;
+  box-shadow: var(--shadow-md);
+}
+
+.dark-mode .dark-mode-toggle {
+  background: var(--card-bg);
+  border-color: var(--primary-purple);
+}
+
+.dark-mode-toggle:hover {
+  transform: rotate(180deg) scale(1.1);
+  background: linear-gradient(135deg, var(--primary-purple), var(--primary-blue));
+  border-color: transparent;
+}
+
 /* Main Layout */
 .web-content {
   max-width: 1400px;
@@ -676,6 +699,18 @@
 .add-resource-form button[type="button"]:hover {
   background: #e8e8e8;
   border-color: #d0d0d0;
+}
+
+.dark-mode .resource-card, 
+.dark-mode .stats-card {
+  background: rgba(30, 41, 59, 0.95);
+  box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.5);
+  color: whitesmoke;
+}
+
+.dark-mode .quick-tips {
+  background: linear-gradient(135deg, #4a4a2e, #3a3a1e);
+  border: 2px solid #6b6b3a;
 }
 
 /* Responsive design */
