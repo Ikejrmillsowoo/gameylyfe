@@ -1,6 +1,7 @@
 import React, { useState } from 'react';
 import './ResourcesWeb.css';
 import Navigator from './Navigator';
+import Header from './Header';
 
 const initialFormState = {
   title: '',
@@ -159,7 +160,7 @@ const initialResources = [
   }
 ];
 
-const ResourcesWeb = () => {
+const ResourcesWeb = ({darkMode}) => {
   const [selectedCategory, setSelectedCategory] = useState('all');
   const [searchTerm, setSearchTerm] = useState('');
   const [bookmarkedResources, setBookmarkedResources] = useState([]);
@@ -193,7 +194,7 @@ const ResourcesWeb = () => {
     { id: 'support', label: 'Support Groups', icon: '🤝' }
   ];
 
-  const [darkMode, setDarkMode] = useState(false);
+  // const [darkMode, setDarkMode] = useState(false);
 
   const handleBookmark = (resourceId) => {
     setBookmarkedResources(prev => {
@@ -223,7 +224,7 @@ const ResourcesWeb = () => {
   return (
     <div className={`resources-web-container ${darkMode ? 'dark-mode' : ''}`}>
       {/* Header */}
-      <header className="web-header">
+      {/* <header className="web-header">
         <div className="header-content">
           <div className="logo">
             <span className="logo-icon">🎮</span>
@@ -242,7 +243,9 @@ const ResourcesWeb = () => {
             <button className="profile-btn">👤</button>
           </div>
         </div>
-      </header>
+      </header> */}
+      {/* <Header setDarkMode={{setDarkMode}} /> */}
+
 
       <div className="web-content">
         {/* Sidebar */}

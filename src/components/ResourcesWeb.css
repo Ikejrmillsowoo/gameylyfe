@@ -152,7 +152,7 @@
 
 .categories-card, .bookmarks-card, .quick-help {
   background: white;
-  border: 3px solid #333;
+  border: 1px solid #aaa8a8;
   border-radius: 12px;
   padding: 20px;
 }
@@ -258,7 +258,7 @@
 .main-content {
   flex: 1;
   background: white;
-  border: 3px solid #333;
+  border: 1px solid #aaa8a8;
   border-radius: 12px;
   padding: 30px;
 }
@@ -313,7 +313,7 @@
 
 .resource-card {
   background: white;
-  border: 2px solid #333;
+  border: 1px solid #aaa8a8;
   border-radius: 12px;
   padding: 20px;
   cursor: pointer;

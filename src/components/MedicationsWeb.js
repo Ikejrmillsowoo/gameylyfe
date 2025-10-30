@@ -1,8 +1,9 @@
 import React, { useState, useEffect, useRef } from 'react';
 import './MedicationsWeb.css';
 import Navigator from './Navigator';
+import Header from './Header';
 
-const MedicationsWeb = () => {
+const MedicationsWeb = ({points, setPoints, darkMode}) => {
   const [medications, setMedications] = useState([
     {
       id: 1,
@@ -42,7 +43,7 @@ const MedicationsWeb = () => {
     time: '',
     notes: '' 
   });
-  const [points, setPoints] = useState(0);
+  // const [points, setPoints] = useState(0);
   const [streak, setStreak] = useState(13);
   const [selectedMed, setSelectedMed] = useState(null);
   // Track the last date (YYYY-MM-DD) when the user completed all meds — prevents double increments
@@ -56,7 +57,7 @@ const MedicationsWeb = () => {
   // Track the current day string so we can detect day changes (for midnight reset behavior)
   const [currentDay, setCurrentDay] = useState(new Date().toDateString());
   const [searchTerm, setSearchTerm] = useState('');
-  const [darkMode, setDarkMode] = useState(false);
+  // const [darkMode, setDarkMode] = useState(false);
   const [petMood, setPetMood] = useState('happy');
   const [petLevel, setPetLevel] = useState(1);
 
@@ -265,29 +266,8 @@ const MedicationsWeb = () => {
 
   return (
     <>
-      <div className={`medications-web-container $[darkMode? 'dark-mode' : ''}`}>
-        <header className="web-header">
-          <div className="header-content">
-            <div className="logo-icon">
-              <span>🎮</span>
-              <h1>Gaming Life</h1>
-            </div>
-            {/* <nav className="nav-menu">
-              <button className="nav-item active">Medications</button>
-              <button className="nav-item">Mood Check</button>
-              <button className="nav-item">Resources</button>
-              <button className="nav-item">Achievements</button>
-            </nav> */}
-            <Navigator />
-            <div className="user-menu">
-              <span className="points-badge">🏆 {points} pts</span>
-              <button className="dark-mode-toggle" onClick={() => setDarkMode(!darkMode)} title={darkMode ? "Light Mode" : "Dark Mode"}>
-                {darkMode ? '☀️' : '🌙'}
-              </button>
-              <button className="profile-btn">👤</button>
-            </div>
-          </div>
-        </header>
+      <div className={`medications-web-container ${darkMode? 'dark-mode' : ''}`}>
+        {/* <Header points={points} setDarkMode={setDarkMode} darkMode={darkMode} /> */}
 
         <div className="web-content">
           <aside className="sidebar">

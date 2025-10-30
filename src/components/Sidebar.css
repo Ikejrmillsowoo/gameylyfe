@@ -1,0 +1,204 @@
+.sidebar {
+  width: 340px;
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+  position: sticky;
+  top: 80px;
+  height: fit-content;
+}
+
+.pet-card,
+.stats-card,
+.quick-tips {
+  background: white;
+  border-radius: 20px;
+  padding: 1.5rem;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.08);
+}
+
+.pet-card h3,
+.stats-card h3,
+.quick-tips h3 {
+  font-size: 1rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  color: #94a3b8;
+  margin-bottom: 1rem;
+}
+
+/* Pet Card */
+.pet-display {
+  text-align: center;
+  font-size: 5rem;
+  margin: 1.5rem 0;
+}
+
+.pet-stats {
+  display: flex;
+  justify-content: space-around;
+  margin-bottom: 1.5rem;
+}
+
+.stat {
+  text-align: center;
+}
+
+.stat-label {
+  display: block;
+  font-size: 0.75rem;
+  color: #94a3b8;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+  margin-bottom: 0.25rem;
+}
+
+.stat-value {
+  display: block;
+  font-size: 1.75rem;
+  font-weight: 800;
+  color: #1e293b;
+  text-transform: capitalize;
+}
+
+.pet-progress {
+  margin-top: 1rem;
+}
+
+.progress-bar {
+  height: 12px;
+  background: #e2e8f0;
+  border-radius: 10px;
+  overflow: hidden;
+  margin-bottom: 0.5rem;
+}
+
+.progress-fill {
+  height: 100%;
+  background: linear-gradient(90deg, #10b981, #059669);
+  transition: width 0.5s ease;
+  box-shadow: 0 0 10px rgba(16, 185, 129, 0.5);
+}
+
+.progress-text {
+  display: block;
+  text-align: center;
+  font-size: 0.875rem;
+  color: #64748b;
+  font-weight: 500;
+}
+
+/* Stats Card */
+.stats-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 1rem;
+  margin-bottom: 1.5rem;
+}
+
+.stat-item {
+  text-align: center;
+  padding: 1rem;
+  background: linear-gradient(135deg, #f8fafc, #f1f5f9);
+  border-radius: 12px;
+}
+
+.stat-number {
+  display: block;
+  font-size: 2.5rem;
+  font-weight: 800;
+  background: linear-gradient(135deg, #667eea, #764ba2);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  line-height: 1;
+  margin-bottom: 0.5rem;
+}
+
+.streak-display {
+  background: linear-gradient(135deg, #fbbf24, #f59e0b);
+  padding: 1rem;
+  border-radius: 12px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.5rem;
+  color: white;
+  font-weight: 700;
+  box-shadow: 0 4px 15px rgba(251, 191, 36, 0.3);
+}
+
+.streak-icon {
+  font-size: 1.5rem;
+}
+
+/* Tips Card */
+.quick-tips {
+  background: linear-gradient(135deg, #fef3c7, #fde68a);
+}
+
+.quick-tips h3 {
+  color: #78350f;
+}
+
+.quick-tips p {
+  font-size: 0.875rem;
+  color: #78350f;
+  line-height: 1.6;
+  margin-bottom: 0.75rem;
+}
+
+.quick-tips p:last-child {
+  margin-bottom: 0;
+}
+
+/* Dark Mode */
+.dark-mode .pet-card,
+.dark-mode .stats-card {
+  background: #1e293b;
+  border: 1px solid #334155;
+}
+
+.dark-mode .stat-value {
+  color: #f1f5f9;
+}
+
+.dark-mode .progress-bar {
+  background: #334155;
+}
+
+.dark-mode .progress-text {
+  color: #94a3b8;
+}
+
+.dark-mode .stat-item {
+  background: linear-gradient(135deg, #334155, #475569);
+}
+
+.dark-mode .stat-number {
+  background: linear-gradient(135deg, #818cf8, #c084fc);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.dark-mode .quick-tips {
+  background: linear-gradient(135deg, #422006, #713f12);
+  border: 1px solid #78350f;
+}
+
+.dark-mode .quick-tips h3 {
+  color: #fcd34d;
+}
+
+.dark-mode .quick-tips p {
+  color: #fef3c7;
+}
+
+@media (max-width: 1024px) {
+  .sidebar {
+    width: 100%;
+    position: static;
+    top: 0;
+  }
+}
