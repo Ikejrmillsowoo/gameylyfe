@@ -13,7 +13,7 @@ function App() {
 
   return (
     <Router>
-      <div className="App">
+      <div className={`App ${darkMode ? 'dark-mode' : ''}`}>
         {/* <nav>
           <Link to="/">Medications</Link>
           <Link to="/resources">Resources</Link>
@@ -22,7 +22,7 @@ function App() {
         <Routes>
           <Route path="/" element={<MedicationsWeb  points={points}/>} />
           <Route path="/moodCheck" element={<MoodCheck  />} />
-          <Route path="/resources" element={<ResourcesWeb  />} />
+          <Route path="/resources" element={<ResourcesWeb darkMode={darkMode} />} />
         </Routes>
       </div>
     </Router>
