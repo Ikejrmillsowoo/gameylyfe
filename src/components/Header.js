@@ -1,5 +1,6 @@
 import React from 'react'
 import Navigator from './Navigator'
+import { Link } from 'react-router-dom'
 
 
 export default function Header({points, setDarkMode, darkMode}) {
@@ -27,7 +28,7 @@ export default function Header({points, setDarkMode, darkMode}) {
               <button className="dark-mode-toggle" onClick={() => setDarkMode(!darkMode)} title={darkMode ? "Light Mode" : "Dark Mode"}>
                 {darkMode ? '☀️' : '🌙'}
               </button>
-              <button className="profile-btn">👤</button>
+              <Link to="/profile"><button className="profile-btn">👤</button></Link>
             </div>
           </div>
         </header>

@@ -1,0 +1,285 @@
+/* 
+:root {
+  --primary-purple: #7C3AED;
+  --primary-blue: #3B82F6;
+  --success-green: #10B981;
+  --warning-orange: #F59E0B;
+  --danger-red: #EF4444;
+  --gold: #FCD34D;
+  --dark-bg: #1F2937;
+  --light-bg: #F3F4F6;
+  --card-bg: #FFFFFF;
+  --text-primary: #111827;
+  --text-secondary: #6B7280;
+  --border-color: #E5E7EB;
+  --shadow-sm: 0 1px 2px 0 rgba(0, 0, 0, 0.05);
+  --shadow-md: 0 4px 6px -1px rgba(0, 0, 0, 0.1);
+  --shadow-lg: 0 10px 15px -3px rgba(0, 0, 0, 0.1);
+  --shadow-xl: 0 20px 25px -5px rgba(0, 0, 0, 0.1);
+}
+
+.dark-mode {
+  --dark-bg: #0F172A;
+  --light-bg: #1E293B;
+  --card-bg: #1E293B;
+  --text-primary: #F1F5F9;
+  --text-secondary: #94A3B8;
+  --border-color: #334155;
+  --shadow-sm: 0 1px 2px 0 rgba(0, 0, 0, 0.3);
+  --shadow-md: 0 4px 6px -1px rgba(0, 0, 0, 0.4);
+  --shadow-lg: 0 10px 15px -3px rgba(0, 0, 0, 0.5);
+  --shadow-xl: 0 20px 25px -5px rgba(0, 0, 0, 0.6);
+} */
+
+.Profile {
+  min-height: 100vh;
+  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif;
+  position: relative;
+  transition: all 0.5s ease;
+}
+
+ .dark-mode.Profile {
+  background: linear-gradient(135deg, #1a1a2e 0%, #0f0f0f 100%);
+}
+
+.Profile::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-image:
+    radial-gradient(circle at 20% 80%, transparent 50%, rgba(255, 255, 255, 0.1) 50%),
+    radial-gradient(circle at 80% 20%, transparent 50%, rgba(255, 255, 255, 0.1) 50%);
+  background-size: 200px 200px;
+  pointer-events: none;
+}
+
+.dark-mode-toggle, .login-out {
+  padding: 5px 5px;
+  background: transparent;
+  border: 2px solid transparent;
+  border-radius: 6px;
+  border-color: black;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  color: var(--text-secondary);
+  position: relative;
+  overflow: hidden;
+}
+
+.dark-mode-toggle:hover {
+  transform: rotate(360deg) scale(1.1);
+  background: linear-gradient(135deg, var(--primary-purple), var(--primary-blue));
+  border-color: transparent;
+}
+
+.dark-mode.dark-mode-toggle {
+  background: var(--card-bg);
+  border-color: var(--primary-purple);
+}
+
+.dark-mode.login-out {
+  background-color: var(--card-bg);
+  border-color: var(--primary-purple);
+}
+/*
+.nav-item {
+  padding: 10px 20px;
+  background: transparent;
+  border: 2px solid transparent;
+  border-radius: 6px;
+  border-color: black;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  color: var(--text-secondary);
+  position: relative;
+  overflow: hidden;
+}
+
+.nav-item:hover {
+  color: var(--text-primary);
+  transform: translateY(-2px);
+}
+
+.nav-item.active {
+  background: linear-gradient(135deg, var(--primary-purple), var(--primary-blue));
+  color: white;
+  box-shadow: 0 4px 15px rgba(124, 58, 237, 0.3);
+}
+
+.nav-item.active {
+  background: linear-gradient(135deg, var(--primary-purple), var(--primary-blue));
+  box-shadow: 0 4px 15px rgba(124, 58, 237, 0.3);
+}
+
+.logo {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  cursor: pointer;
+  transition: transform 0.3s ease;
+}
+
+.logo:hover {
+  transform: scale(1.05);
+}
+
+.logo-icon {
+  font-size: 2.5em;
+  animation: float 3s ease-in-out infinite;
+}
+
+@keyframes float {
+  0%, 100% { transform: translateY(0px); }
+  50% { transform: translateY(-5px); }
+}
+
+.logo h1 {
+  font-size: 1.8em;
+  font-weight: 800;
+  background: linear-gradient(135deg, var(--primary-purple), var(--primary-blue));
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
+.page-header {
+  background: rgba(255, 255, 255, 0.95);
+  backdrop-filter: blur(10px);
+  border-bottom: none;
+  position: sticky;
+  top: 0;
+  z-index: 100;
+  box-shadow: var(--shadow-lg);
+  transition: all 0.5s ease;
+}
+
+.dark-mode.page-header {
+  background: rgba(30, 41, 59, 0.95);
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.5);
+}
+
+.header-content {
+  margin: 0 auto;
+  padding: 5px 10px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background: var(--card-bg);
+}
+
+.dark-mode.header-content {
+  color: var(--text-primary);
+  background: var(--shadow-lg);
+}
+*/
+.buffer {
+  padding: .5px;
+}
+
+.content-header {
+  color: var(--text-primary);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  font: 3em sans-serif;
+}
+
+.page-content {
+  display: flex;
+  width: 60%;
+}
+
+.profile-content {
+  color: var(--text-primary);
+  width: 90%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-items: center;
+}
+
+.sidebar {
+  color: var(--text-primary);
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  padding: 25px;
+  align-items: left;
+  width: 100%;
+}
+
+.sidebar-box {
+  background: rgba(255, 255, 255, 0.95);
+  backdrop-filter: blur(10px);
+  border: none;
+  border-radius: 20px;
+  padding: 2.5px;
+  z-index: 100;
+  box-shadow: var(--shadow-xl);
+  transition: all 0.5s ease;
+}
+
+.dark-mode.sidebar-box {
+  background: linear-gradient(135deg, #1a1a2e 0%, #0f0f0f 100%);
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.5);
+}
+
+.stats-card {
+  background: rgba(255, 255, 255, 0.95);
+  backdrop-filter: blur(10px);
+  border: none;
+  border-radius: 20px;
+  padding: 25px;
+  z-index: 100;
+  box-shadow: var(--shadow-xl);
+  transition: all 0.5s ease;
+  width: 80%;
+}
+
+.dark-mode.stats-card {
+  background: linear-gradient(135deg, #1a1a2e 0%, #0f0f0f 100%);
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.5);
+}
+
+.stats-box {
+  text-align: center;
+}
+
+.stats-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 15px;
+  margin-bottom: 20px;
+}
+
+.streak-display {
+  background: linear-gradient(135deg, var(--warning-orange), var(--gold));
+  color: var(--dark-bg);
+  padding: 18px;
+  border-radius: 15px;
+  text-align: center;
+  font-weight: bold;
+  font-size: 1.1em;
+  box-shadow: 0 5px 15px rgba(245, 158, 11, 0.3);
+  animation: pulse-streak 3s infinite;
+}
+
+@keyframes pulse-streak {
+  0%, 100% { transform: scale(1); }
+  50% { transform: scale(1.02); }
+}
+
+.streak-icon {
+  font-size: 1.2em;
+  margin-right: 5px;
+}
+
+.streak-text {
+  font-size: 1em;
+} 

@@ -3,7 +3,7 @@ import './MedicationsWeb.css';
 import Navigator from './Navigator';
 import Header from './Header';
 
-const MedicationsWeb = ({points, setPoints, darkMode}) => {
+const MedicationsWeb = ({points, setPoints, darkMode, petLevel, setPetLevel, setPetMood, petMood}) => {
   const [medications, setMedications] = useState([
     {
       id: 1,
@@ -58,8 +58,8 @@ const MedicationsWeb = ({points, setPoints, darkMode}) => {
   const [currentDay, setCurrentDay] = useState(new Date().toDateString());
   const [searchTerm, setSearchTerm] = useState('');
   // const [darkMode, setDarkMode] = useState(false);
-  const [petMood, setPetMood] = useState('happy');
-  const [petLevel, setPetLevel] = useState(1);
+  // const [petMood, setPetMood] = useState('happy');
+  // const [petLevel, setPetLevel] = useState(1);
 
   // Calculate points needed for each level
   const getPointsForLevel = (level) => {
