@@ -181,7 +181,7 @@
   padding: .5px;
 }
 
-.content-header {
+.content-header-page {
   color: var(--text-primary);
   display: flex;
   flex-direction: column;
@@ -189,12 +189,12 @@
   font: 3em sans-serif;
 }
 
-.page-content {
+.content-page {
   display: flex;
   width: 60%;
 }
 
-.profile-content {
+.profile-content-page {
   color: var(--text-primary);
   width: 90%;
   display: flex;
@@ -203,7 +203,21 @@
   justify-items: center;
 }
 
-.sidebar {
+.profile-content-top {
+ background: var(--card-bg);
+     display: flex;
+    justify-content: space-between;
+    width: 60%;
+    margin-bottom: 5%;
+}
+
+.bigger {
+    width: 100px;
+    height: 100px;
+    align-items: flex-start;
+}
+
+.sidebar-page {
   color: var(--text-primary);
   width: 100%;
   display: flex;
@@ -283,3 +297,5 @@
 .streak-text {
   font-size: 1em;
 } 
+
+
